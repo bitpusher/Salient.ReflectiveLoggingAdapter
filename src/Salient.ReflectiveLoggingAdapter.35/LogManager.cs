@@ -18,7 +18,7 @@ namespace Salient.ReflectiveLoggingAdapter
 
         public static ILog GetLogger(Type type)
         {
-            var inner = CreateInnerLogger(type.Name, LogLevel.All, true, true, true, "u");
+            var inner = CreateInnerLogger(type.FullName, LogLevel.All, true, true, true, "u");
             return new LogAdapter(inner);
         }
 
