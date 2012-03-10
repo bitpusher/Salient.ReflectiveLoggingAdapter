@@ -13,7 +13,7 @@
   <Target Name="Package" DependsOnTargets="CreateDropDirectories;CopyMSBuildOutputToDropDirectory;CopyLicenseToAllDirectories;CopyReportsToDropFolder">
     <Message Text="Packaging with NuGet" />
     <Copy SourceFiles="$(RootDirectory)\src\Salient.ReflectiveLoggingAdapter.nuspec" DestinationFolder="$(DropDirectory)"/>
-    <Exec Command='"$(NuGetEXE)" pack $(DropDirectory)\Salient.ReflectiveLoggingAdapter.nuspec' ContinueOnError='false' WorkingDirectory='$(DropDirectory)'/>
+    <Exec Command='"$(NuGetEXE)" pack -sym $(DropDirectory)\Salient.ReflectiveLoggingAdapter.nuspec' ContinueOnError='false' WorkingDirectory='$(DropDirectory)'/>
   </Target>
  
   <Target Name="PublishToNugetOrg" DependsOnTargets="Package">
