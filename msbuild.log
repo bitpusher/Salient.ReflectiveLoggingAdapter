@@ -1,10 +1,10 @@
-Build started 3/10/2012 1:03:07 PM.
+Build started 3/10/2012 1:12:37 PM.
 Project "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\build.xml" on node 1 (default targets).
 Building with tools version "4.0".
 Target "UpdateVersion" in file "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\tools\msbuild\Versioning.targets.xml" from project "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\build.xml" (target "Go" depends on it):
 Using "Message" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
 Task "Message"
-  Version: 3.0.5
+  Version: 3.0.5-bleeding-0
 Done executing task "Message".
 Using "CreateItem" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
 Task "CreateItem"
@@ -3739,7 +3739,7 @@ Task "NUnit"
   Execution Runtime: Default
   Excluded categories: DependsOnExternalResource
   ..
-  Tests run: 2, Errors: 0, Failures: 0, Inconclusive: 0, Time: 0.2020116 seconds
+  Tests run: 2, Errors: 0, Failures: 0, Inconclusive: 0, Time: 0.2030116 seconds
     Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
   
 Done executing task "NUnit".
@@ -3748,9 +3748,7 @@ Target "CreateDropDirectories" in file "C:\dev\Salient\Salient.ReflectiveLogging
 Task "Message"
   Making the drop directories at 'C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist'.
 Done executing task "Message".
-Task "RemoveDir"
-  Removing directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist".
-Done executing task "RemoveDir".
+Task "RemoveDir" skipped, due to false condition; (Exists('$(DropDirectory)')) was evaluated as (Exists('C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist')).
 Task "MakeDir"
   Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist".
 Done executing task "MakeDir".
@@ -3767,6 +3765,60 @@ Done building target "CreateDropDirectories" in project "build.xml".
 Target "CopySourceToDropDirectory" in file "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\tools\msbuild\DropsAndPackaging.targets.xml" from project "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\build.xml" (target "Package" depends on it):
 Task "Message"
   Copying source files to output to C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib
+Done executing task "Message".
+Task "Copy"
+  Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35.Tests".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35.Tests\CoverageFixture.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35.Tests\CoverageFixture.cs".
+  Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35.Tests\Properties".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35.Tests\Properties\AssemblyInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35.Tests\Properties\AssemblyInfo.cs".
+  Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35.UsageExamples".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35.UsageExamples\Program.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35.UsageExamples\Program.cs".
+  Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35.UsageExamples\Properties".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35.UsageExamples\Properties\AssemblyInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35.UsageExamples\Properties\AssemblyInfo.cs".
+  Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\AbstractAppender.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35\AbstractAppender.cs".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\DebugAppender.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35\DebugAppender.cs".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\ILog.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35\ILog.cs".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\LogAdapter.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35\LogAdapter.cs".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\LogLevel.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35\LogLevel.cs".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\LogManager.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35\LogManager.cs".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\NullLogger.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35\NullLogger.cs".
+  Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35\Properties".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\Properties\AssemblyInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35\Properties\AssemblyInfo.cs".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\ReflectedMethodInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.35\ReflectedMethodInfo.cs".
+  Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\App.xaml.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\App.xaml.cs".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\MainPage.xaml.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\MainPage.xaml.cs".
+  Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Debug".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Debug\App.g.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Debug\App.g.cs".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Debug\App.g.i.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Debug\App.g.i.cs".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Debug\MainPage.g.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Debug\MainPage.g.cs".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Debug\MainPage.g.i.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Debug\MainPage.g.i.cs".
+  Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Release".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Release\App.g.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Release\App.g.cs".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Release\MainPage.g.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Release\MainPage.g.cs".
+  Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\Properties".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\Properties\AssemblyInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\Properties\AssemblyInfo.cs".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\SimpleCoverageFixture.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\SimpleCoverageFixture.cs".
+  Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Phone7\Properties".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7\Properties\AssemblyInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Phone7\Properties\AssemblyInfo.cs".
+  Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\App.xaml.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\App.xaml.cs".
+  Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\obj\Debug".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\obj\Debug\App.g.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\obj\Debug\App.g.cs".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\obj\Debug\App.g.i.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\obj\Debug\App.g.i.cs".
+  Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\obj\Release".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\obj\Release\App.g.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\obj\Release\App.g.cs".
+  Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\Properties".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\Properties\AssemblyInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\Properties\AssemblyInfo.cs".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\Tests.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\Tests.cs".
+  Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Silverlight\Properties".
+  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Silverlight\Properties\AssemblyInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\src\Salient.ReflectiveLoggingAdapter.Silverlight\Properties\AssemblyInfo.cs".
+Done executing task "Copy".
+Done building target "CopySourceToDropDirectory" in project "build.xml".
+Target "CopyMSBuildOutputToDropDirectory" in file "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\tools\msbuild\DropsAndPackaging.targets.xml" from project "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\build.xml" (target "Package" depends on it):
+Task "Message"
+  Copying Release dlls output to C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib
 Done executing task "Message".
 Task "Copy"
   Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.35.Tests".
@@ -3815,44 +3867,6 @@ Task "Copy"
   Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\Properties\AssemblyInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\Properties\AssemblyInfo.cs".
   Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\Tests.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\Tests.cs".
   Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Silverlight\Properties".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Silverlight\Properties\AssemblyInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Silverlight\Properties\AssemblyInfo.cs".
-Done executing task "Copy".
-Done building target "CopySourceToDropDirectory" in project "build.xml".
-Target "CopyMSBuildOutputToDropDirectory" in file "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\tools\msbuild\DropsAndPackaging.targets.xml" from project "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\build.xml" (target "Package" depends on it):
-Task "Message"
-  Copying Release dlls output to C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib
-Done executing task "Message".
-Task "Copy"
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35.Tests\CoverageFixture.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.35.Tests\CoverageFixture.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35.Tests\Properties\AssemblyInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.35.Tests\Properties\AssemblyInfo.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35.UsageExamples\Program.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.35.UsageExamples\Program.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35.UsageExamples\Properties\AssemblyInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.35.UsageExamples\Properties\AssemblyInfo.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\AbstractAppender.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.35\AbstractAppender.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\DebugAppender.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.35\DebugAppender.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\ILog.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.35\ILog.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\LogAdapter.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.35\LogAdapter.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\LogLevel.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.35\LogLevel.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\LogManager.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.35\LogManager.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\NullLogger.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.35\NullLogger.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\Properties\AssemblyInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.35\Properties\AssemblyInfo.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35\ReflectedMethodInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.35\ReflectedMethodInfo.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\App.xaml.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Phone7.Tests\App.xaml.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\MainPage.xaml.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Phone7.Tests\MainPage.xaml.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Debug\App.g.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Debug\App.g.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Debug\App.g.i.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Debug\App.g.i.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Debug\MainPage.g.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Debug\MainPage.g.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Debug\MainPage.g.i.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Debug\MainPage.g.i.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Release\App.g.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Release\App.g.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Release\MainPage.g.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Phone7.Tests\obj\Release\MainPage.g.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\Properties\AssemblyInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Phone7.Tests\Properties\AssemblyInfo.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7.Tests\SimpleCoverageFixture.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Phone7.Tests\SimpleCoverageFixture.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Phone7\Properties\AssemblyInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Phone7\Properties\AssemblyInfo.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\App.xaml.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\App.xaml.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\obj\Debug\App.g.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\obj\Debug\App.g.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\obj\Debug\App.g.i.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\obj\Debug\App.g.i.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\obj\Release\App.g.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\obj\Release\App.g.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\Properties\AssemblyInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\Properties\AssemblyInfo.cs".
-  Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\Tests.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Silverlight.Tests\Tests.cs".
   Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.Silverlight\Properties\AssemblyInfo.cs" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.Silverlight\Properties\AssemblyInfo.cs".
   Creating directory "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.35.Tests\bin\Release".
   Copying file from "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\src\Salient.ReflectiveLoggingAdapter.35.Tests\bin\Release\log4net.dll" to "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\lib\Salient.ReflectiveLoggingAdapter.35.Tests\bin\Release\log4net.dll".
@@ -3931,8 +3945,8 @@ Done executing task "Copy".
 Task "Exec"
   "C:\Program Files (x86)\nuget\nuget.exe" pack -sym C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\..\dist\Salient.ReflectiveLoggingAdapter.nuspec
   Attempting to build package from 'Salient.ReflectiveLoggingAdapter.nuspec'.
-  Successfully created package 'C:\dev\Salient\Salient.ReflectiveLoggingAdapter\dist\Salient.ReflectiveLoggingAdapter.3.0.5.nupkg'.
-  Successfully created package 'C:\dev\Salient\Salient.ReflectiveLoggingAdapter\dist\Salient.ReflectiveLoggingAdapter.3.0.5.symbols.nupkg'.
+  Successfully created package 'C:\dev\Salient\Salient.ReflectiveLoggingAdapter\dist\Salient.ReflectiveLoggingAdapter.3.0.5-bleeding-0.nupkg'.
+  Successfully created package 'C:\dev\Salient\Salient.ReflectiveLoggingAdapter\dist\Salient.ReflectiveLoggingAdapter.3.0.5-bleeding-0.symbols.nupkg'.
 Done executing task "Exec".
 Done building target "Package" in project "build.xml".
 Target "Go" in project "C:\dev\Salient\Salient.ReflectiveLoggingAdapter\src\build.xml" (entry point):
@@ -3952,4 +3966,4 @@ Build succeeded.
     2 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:07.47
+Time Elapsed 00:00:07.78

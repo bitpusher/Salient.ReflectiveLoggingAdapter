@@ -35,7 +35,7 @@
       <MSBuildOutputItems Include="$(SrcDirectory)\**\*.cs" />
     </ItemGroup>
     <Message Text="Copying source files to output to $(DropLibDirectory)" />
-    <Copy ContinueOnError="false" SourceFiles="@(MSBuildOutputItems)" DestinationFiles="@(MSBuildOutputItems ->'$(DropLibDirectory)\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy ContinueOnError="false" SourceFiles="@(MSBuildOutputItems)" DestinationFiles="@(MSBuildOutputItems ->'$(DropLibDirectory)\src\%(RecursiveDir)%(Filename)%(Extension)')" />
   </Target>
 
   <Target Name="CopyMSBuildOutputToDropDirectory">
