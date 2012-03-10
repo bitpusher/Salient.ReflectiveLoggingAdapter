@@ -17,6 +17,7 @@
 
   <PropertyGroup>
     <Configuration>Release</Configuration>
+    <Configuration Condition="'$(PreRelease)'!=''">Debug</Configuration>
     <Platform>Any CPU</Platform>
   </PropertyGroup>
 
@@ -37,8 +38,7 @@
   <!-- Used to build the Dev branch - everything except packaging -->
   <Target Name="GoDev" DependsOnTargets="UpdateVersion;
                                       Build; 
-                                      RunTests;
-                                      Package;">
+                                      RunTests;">
   </Target>
 
   <Target Name="Build">
