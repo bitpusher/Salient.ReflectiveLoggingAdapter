@@ -10,7 +10,7 @@
     <NuGet_apiKey Condition="'$(NuGet_apiKey)'==''">You must call with /p:NuGet_apiKey={yourkey} to publish to nuget</NuGet_apiKey>
   </PropertyGroup>
 
-  <Target Name="Package" DependsOnTargets="CreateDropDirectories;CopyMSBuildOutputToDropDirectory;CopyLicenseToAllDirectories;CopyReportsToDropFolder">
+  <Target Name="Package" DependsOnTargets="CreateDropDirectories;CopySourceToDropDirectory;CopyMSBuildOutputToDropDirectory;CopyLicenseToAllDirectories;CopyReportsToDropFolder">
     <Message Text="Packaging with NuGet" />
     <Copy SourceFiles="$(RootDirectory)\src\Salient.ReflectiveLoggingAdapter.nuspec" DestinationFolder="$(DropDirectory)"/>
     <Exec Command='"$(NuGetEXE)" pack -sym $(DropDirectory)\Salient.ReflectiveLoggingAdapter.nuspec' ContinueOnError='false' WorkingDirectory='$(DropDirectory)'/>
@@ -29,7 +29,15 @@
     <MakeDir Directories="$(DropContentDirectory)" Condition="!Exists('$(DropContentDirectory)')" />
     <MakeDir Directories="$(DropToolsDirectory)" Condition="!Exists('$(DropToolsDirectory)')" />
   </Target>
-  
+
+  <Target Name="CopySourceToDropDirectory">
+    <ItemGroup>
+      <MSBuildOutputItems Include="$(SrcDirectory)\**\*.cs" />
+    </ItemGroup>
+    <Message Text="Copying source files to output to $(DropLibDirectory)" />
+    <Copy ContinueOnError="false" SourceFiles="@(MSBuildOutputItems)" DestinationFiles="@(MSBuildOutputItems ->'$(DropLibDirectory)\%(RecursiveDir)%(Filename)%(Extension)')" />
+  </Target>
+
   <Target Name="CopyMSBuildOutputToDropDirectory">
     <ItemGroup>
       <MSBuildOutputItems Include="$(SrcDirectory)\**\bin\$(Configuration)\*.*" />

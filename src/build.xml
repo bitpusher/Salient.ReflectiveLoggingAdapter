@@ -37,7 +37,8 @@
   <!-- Used to build the Dev branch - everything except packaging -->
   <Target Name="GoDev" DependsOnTargets="UpdateVersion;
                                       Build; 
-                                      RunTests">
+                                      RunTests;
+                                      Package;">
   </Target>
 
   <Target Name="Build">
