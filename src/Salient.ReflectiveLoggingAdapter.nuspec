@@ -13,6 +13,6 @@
 	  <file src="lib\salient.reflectiveloggingadapter.35\bin\release\*.*" target="lib\net35"/>
     <file src="lib\salient.reflectiveloggingadapter.phone7\bin\release\*.*" target="lib\sl3-wp"/>
     <file src="lib\salient.reflectiveloggingadapter.silverlight\bin\release\*.*" target="lib\sl4"/>
-    <file src="**\*.cs" target="src" />
+    <file src="lib\src\**\*.cs" target="src" />
   </files>
 </package>
