@@ -23,6 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BFFF7A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{42BA19AC-56EC-41D8-81BE-2D35F28516E2}"
 	ProjectSection(SolutionItems) = preProject
+		..\build.cmd = ..\build.cmd
 		build.xml = build.xml
 		..\tools\msbuild\CommonProperties.targets.xml = ..\tools\msbuild\CommonProperties.targets.xml
 		..\tools\msbuild\DropsAndPackaging.targets.xml = ..\tools\msbuild\DropsAndPackaging.targets.xml
