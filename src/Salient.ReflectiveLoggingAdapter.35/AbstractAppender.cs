@@ -38,6 +38,8 @@ namespace Salient.ReflectiveLoggingAdapter
             _items.Add(new LogItem() { Exception = exception, Level = level, Message = message.ToString() });
         }
     }
+    ///<summary>
+    ///</summary>
     public abstract class AbstractAppender : ILog
     {
         protected AbstractAppender(string logName, LogLevel logLevel, bool showLevel, bool showDateTime, bool showLogName,
